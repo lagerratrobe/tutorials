@@ -20,9 +20,14 @@ im = pyplot.imshow(img)
 ```
 # USE THE raster LIBRARY'S BUILT-IN plot() CAPABILITY
 library(raster)
+library(repr)
 
+options(repr.plot.width=4, repr.plot.height=3)
 img_file <- raster("test.tif")
 plot(img_file)
+
+# NOTE: repr is used solely to control the output size of the plot.  
+# Without it, the image is rather large.
 ```
 
 ![R_jupyter_geotif](https://user-images.githubusercontent.com/686797/69753283-12bce000-1108-11ea-86c5-899ccdcd11a8.png)
